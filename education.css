@@ -1,0 +1,132 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.customBg {
+  background-color: #f8fafc;
+}
+
+#category {
+  padding-top: 100px;
+}
+
+#achivements {
+  padding-top: 100px;
+}
+
+#carouselExampleIndicators{
+  background-color: gray;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+/* ANIMATION FOR THE MOVING RIBBON */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-250px * 6)
+    ); /* Move by the width of all original slides */
+  }
+}
+
+.slider {
+  background-color: #f8fafc;
+  height: 100px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider .slider-track {
+  animation: scroll 10s linear infinite;
+  display: flex;
+  width: calc(250px * 12); /* Total width of original + duplicate slides */
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+
+
+/* Slider Style */
+#demo{
+  background: linear-gradient(112deg,rgb(230, 227, 227) 50%, antiquewhite 50%);
+  max-width: 900px;
+  margin: auto;
+}
+.carousel-caption {
+  position: initial;
+  z-index: 10;
+  padding: 5rem 8rem;
+  color: rgba(30, 28, 28, 0.86);
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 2rem;
+}
+@media(max-width:767px){
+  .carousel-caption {
+      position: initial;
+      z-index: 10;
+      padding: 3rem 2rem;
+      color: rgba(78, 77, 77, 0.856);
+      text-align: center;
+      font-size: 0.7rem;
+      font-style: italic;
+      font-weight: bold;
+      line-height: 1.5rem;
+  }
+}
+.carousel-caption img{
+  width: 6rem;
+  border-radius: 5rem;
+  margin-top: 2rem;
+}
+@media(max-width:767px){
+  .carousel-caption img{
+      width: 4rem;
+      border-radius: 4rem;
+      margin-top: 1rem;
+  }
+}
+#image-caption{
+  font-style: normal;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+@media(max-width:767px){
+  #image-caption{
+      font-style: normal;
+      font-size: 0.6rem;
+      margin-top: 0.5rem;
+  }
+}
+
+@media(max-width:767px){
+  i{
+      padding: 0.8rem;
+  }
+}
+.carousel-control-prev{
+  justify-content: flex-start;
+}
+
+.carousel-control-next {
+  justify-content: flex-end;
+}
+.carousel-control-prev,.carousel-control-next{
+  transition: none;
+  opacity: unset;
+}
